@@ -1,0 +1,123 @@
+
+				<div class="row">
+						<div class="col-md-12">
+							<div class="content-nav">
+							<!--导航内容开始-->
+							<nav class="navbar navbar-default navbar-zdy">
+							<div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#"><img src="__PUBLIC__/images/logo.png"></a>
+								</div>
+
+								
+									<ul class="nav navbar-nav navbar-right" >
+										<li class="active"><a href="{:url('Index/index')}">首页</a></li>
+										 {foreach name="cates" item="ca"}
+										<li><a href="{:url('Cate/index',array('id'=>$ca.id))}">{$ca.name}</a></li>
+										{/foreach} 
+										<li><a href="{:url('About/index')}">关于</a></li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员中心 <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a  href="#">{$Request.session.username}</a></li>
+												<li><a href="#myModal1" data-toggle="modal" >会员登录</a></li>
+												<li><a href="#myModal" data-toggle="modal" >会员注册</a></li>
+												<li><a href="{:url('Login/Logout')}">退出</a></li>
+											</ul>
+										</li>
+									</ul>
+								
+										
+									
+										
+								
+							</div><!-- /.container-fluid -->
+						</nav>
+						<!--导航内容结束-->	
+						</div>					
+						</div>	
+					
+					
+				</div>
+				
+				
+					<!--注册模态框开始-->	
+					<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+				  <div class="modal-dialog" role="document" style="width:400px;">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">会员注册</h4>
+				      </div>
+				      <div class="modal-body">
+				        
+								<form action="{:url('Login/add')}" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<label for="username">用户名</label>
+									<input type="text" class="form-control"  name="username"      id="username" placeholder="请输入用户名">
+								</div>
+								<div class="form-group">
+									<label for="password">密码</label>
+									<input type="password" class="form-control" name="password"  id="password" placeholder="请输入密码">
+								</div>
+								<div class="form-group">
+									<label for="nickname">昵称</label>
+									<input type="text" class="form-control"  name="nickname"    id="nickname" placeholder="请输入昵称">
+								</div>
+								<div class="form-group">
+									<label for="nickname">照片上传</label>
+									<input type="file"  name="pic"    id="pic" placeholder="请上传照片">
+								</div>
+								
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="submit" class="btn btn-primary">注册</button>
+				      </div>
+					  
+							</form>
+							
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+					<!--注册模态框结束-->			
+						
+					
+					<!--登录模态框开始-->
+					<div class="modal fade" tabindex="-1" role="dialog" id="myModal1">
+					  <div class="modal-dialog" role="document" style="width:400px;">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title">会员登录</h4>
+					      </div>
+					      <div class="modal-body">
+					        
+									<form action="{:url('Login/login')}" method="post">
+										
+									<div class="form-group">
+										<label for="username">用户名</label>
+										<input type="text" class="form-control "    name="username"       id="username" placeholder="请输入用户名">
+									</div>
+									<div class="form-group">
+										<label for="password">密码</label>
+										<input type="password" class="form-control"  name="password"       id="password" placeholder="请输入密码">
+									</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					        <button type="submit" class="btn btn-primary">登录</button>
+					      </div>
+								</form>
+								
+					    </div><!-- /.modal-content -->
+					  </div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+				<!--登录模态框结束-->

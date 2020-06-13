@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>网站后台管理-增加页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="__PUBLIC__/css/mui.css" rel="stylesheet" />
+		<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+		<style>
+			/*头部右边导航*/
+			.navbar-zdy{
+				margin-right:25px;			
+			}
+			/* 小屏幕（平板，大于等于 768px） */
+            @media (min-width:768px) { 
+				
+				#slider{
+					width:250px;
+					height:600px;
+					position: absolute;
+					z-index: 1;			
+				}	
+				.main{
+					margin-left: 255px;			
+				}
+				
+				.panel-zdy{
+					margin-top:-20px;				
+				}
+				.panel-body1{
+					height:550px;	
+				}
+				.breadcrumb-zdy{
+					margin-top:-20px;
+					
+				}
+				
+				
+			}
+			
+			
+			
+			
+			
+		</style>	
+		
+		
+	</head>
+
+	<body>
+	<!--导航开始-->
+	
+	{include file="common/top"}
+   
+ 
+  <!--侧边栏开始-->
+ {include file="common/left"}
+
+  <!--侧边栏结束-->
+</nav>	
+<!--导航结束-->
+
+<!--主要内容开始-->
+<div class="main">
+	<!--面包屑开始-->
+	<ol class="breadcrumb breadcrumb-zdy">
+	  <li><a href="#">首页</a></li>
+	  <li><a href="#">友情管理</a></li>
+	  <li class="active">友情列表</li>
+	</ol>	
+	<!--面包屑结束-->
+	
+	<!--主要工作区域开始-->
+	<div class="workplace">
+		<form class="form-horizontal" method="post" action="{:url('Friend/update')}">
+		<h5 class="page-header alert-info" style="padding: 10px;margin-top: -20px;margin-bottom: 10px;">修改友情</h5>	
+			<div class="row">
+				<div class="col-md-8 col-md-offset-1">
+							<div class="form-group">
+							<label for="name" class="col-sm-2 control-label">友情名称</label>
+							<div class="col-sm-10">
+								<input type="hidden" class="form-control" id="id" name="id" value="{$friend.id}">
+								<input type="text" class="form-control" id="name" name="name" placeholder="请输入友情名称" value="{$friend.name}">
+							</div>
+							</div>
+							<div class="form-group">
+							<label for="sort" class="col-sm-2 control-label">友情排序</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="sort" name="sort" placeholder="请输入友情排序" value="{$friend.sort}">
+							</div>
+							</div>
+							<div class="form-group">
+							<label for="url" class="col-sm-2 control-label">友情跳转地址</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="url" name="url" placeholder="请输入友情跳转地址" value="{$friend.url}">
+							</div>
+							</div>
+					
+							<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<input type="submit" value="修改友情" class="btn btn-success">
+								<input type="reset" value="重置信息" class="btn btn-danger">
+							</div>
+							</div>
+					
+				</div>	
+				
+				
+			</div>	
+		
+		
+		
+		
+		
+		  
+		</form>
+		
+	</div>	
+	
+	
+	
+	<!--主要工作区域结束-->
+	
+	
+</div>	
+<!--主要内容结束-->
+	
+	</body>
+
+</html>
+

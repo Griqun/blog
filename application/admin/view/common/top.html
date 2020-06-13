@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default navbar-static-top">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">网站后台管理</a>
+    </div>
+
+    
+      <ul class="nav navbar-nav navbar-right navbar-zdy">
+      
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> {$Request.session.username} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('Login/logout')}">退出登录</a></li>
+            <li><a href="{:url('Admin/modify',array('id'=>$Request.session.id))}">修改密码</a></li>
+          </ul>
+        </li>
+      </ul>
+   

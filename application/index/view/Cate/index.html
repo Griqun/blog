@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>个人博客系统</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="__PUBLIC__/css/mui.css" rel="stylesheet" />
+		<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+		<link href="__PUBLIC__/css/main.css" rel="stylesheet">
+				<script>		
+		 $(function(){
+		 $('#myul li').hover(function(){		 
+		 $(this).addClass('active');
+		$('#first').removeClass('active');			 
+		},function(){			 
+		        $(this).removeClass('active');
+		         $('#first').addClass('active');				 
+		 });		 
+		 })
+		</script>
+	</head>
+
+	<body id="top">
+		<!--第一个区域开始-->
+		<div class="container content-wrapper">
+			
+			{include file="common/header"}
+			
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="content-nav">
+						<!--幻灯片内容开始-->
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="__PUBLIC__/images/1.jpg" alt="图片一">
+									<div class="carousel-caption">
+									</div>
+								</div>
+								<div class="item">
+									<img src="__PUBLIC__/images/2.jpg" alt="图片二">
+									<div class="carousel-caption">
+									</div>
+								</div>
+								<div class="item">
+									<img src="__PUBLIC__/images/3.jpg" alt="图片三">
+									<div class="carousel-caption">
+									</div>
+								</div>
+								
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>	
+						<!--幻灯片内容结束-->
+					</div><!--content-nav-->	
+					</div>	
+				
+				
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+					<div class="content-nav">
+						<!--巨幕内容开始-->
+						<!--巨幕内容结束-->
+					</div>	
+					</div>	
+					
+				</div>
+				
+				
+				
+				<div class="row">
+						<div class="col-md-8 col-sm-12">
+							
+							{foreach name="articless" item="ar"}
+							
+							<div class="content-nav">
+								<div class="row">
+										<div class="col-md-4 col-sm-12">
+											<!--缩略图开始-->
+											<a href="#" class="thumbnail">
+												<img src="__IMG__/{$ar.pic}" alt="mrth1">
+											</a>
+											<!--缩略图结束-->
+										</div>
+										<div class="col-md-8 col-sm-12">
+											<!--文章列表内容开始-->
+										  <div class="blog-post">
+													<h3><a href="{:url('Article/index',array('id'=>$ar.id))}">{$ar.title}</a></h3>
+													<div class="blog-post-meta">
+														<time datetime="2019-02-18">{:date('Y-m-d',$ar.time)}</time>
+														<span>作者：{$ar.author}</span>
+													</div>	
+													<div class="blog-post-desc">
+														<p>{$ar.description}</p>
+													</div>	
+													<div class="blog-post-more">
+														<a href="{:url('Article/index',array('id'=>$ar.id))}" class="btn btn-primary btn-zdy">阅读全文</a>
+														<span class="tj">阅读（{$ar.num}）</span>
+													</div>
+														
+																
+															<div style="float:left">
+																	<form action="{:url('Zan/index')}" method="post">
+																	<div class="form-group">					
+																		<input type="hidden" name="zanid" class="form-control" value="{$ar.id}">
+																	</div>	
+																	<div class="form-group">					
+																		<input type="hidden" name="uid" class="form-control" value="{$Request.session.id}">
+																	</div>	
+																	
+																	<button type="submit" class="btn btn-default" style="border:none;background-color: transparent;color: #828282;"><span class="glyphicon glyphicon-thumbs-up" ></span></button>{$ar.zannum}
+															</form>			
+															</div>
+															
+															
+															<div>
+																	<form action="{:url('Shou/index')}" method="post">
+																	<div class="form-group">					
+																		<input type="hidden" name="shouid" class="form-control" value="{$ar.id}">
+																	</div>	
+																	<div class="form-group">					
+																		<input type="hidden" name="uid" class="form-control" value="{$Request.session.id}">
+																	</div>	
+																	
+																	<button type="submit" class="btn btn-default"  style="border:none;background-color: transparent;color: #828282;"><span class="glyphicon glyphicon-heart-empty" ></span></button>{$ar.shounum}
+															</form>			
+															</div>
+													
+														
+														
+				              </div>
+											<!--文章列表内容结束-->
+										</div>	
+								</div>	
+							
+							</div>
+							
+						  {/foreach}
+							
+							
+						<div class="content-nav">
+							<div class="row">
+						<div class="col-md-12 col-sm-12">		
+						<!--分页效果开始-->
+						<nav aria-label="Page navigation">
+						<ul class="pagination">
+							{$articless->render()}
+						</ul>
+						</nav>
+						<!--分页效果结束-->
+						</div>
+						</div>
+						</div>	
+							
+							
+							</div>
+					
+					{include file="common/right"}
+					
+				</div>
+			
+		</div>
+		<!--第一个区域结束-->
+		
+	
+		{include file="common/footer"}
+		
+		
+		{include file="common/copyright"}
+		
+		
+		
+
+	
+	
+	
+	
+	
+	
+		
+	</body>
+
+</html>
+

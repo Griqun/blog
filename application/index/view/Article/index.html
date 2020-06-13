@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>文章页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link href="__PUBLIC__/css/mui.css" rel="stylesheet" />
+		<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+		<link href="__PUBLIC__/css/main.css" rel="stylesheet">
+	</head>
+
+	<body id="top">
+		<!--第一个区域开始-->
+		<div class="container content-wrapper">
+
+			{include file="common/header"}
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="content-nav">
+						<div class="heading-title">
+							<h2>{$article.title}</h2>
+							<ol class="breadcrumb bread">
+								<li><a href="#">首页</a></li>
+								<li class="active"><a href="#">{$article.title}</a></li>
+							</ol>
+							<p><span>收藏数：{$article.shounum}</span> <span>点赞数：{$article.zannum}</span></p>
+							<p><span>作者：{$article.author}</span> <span>发表时间：{:date('Y-m-d',$article.time)}</span> <span>阅读数：{$article.num}</span>
+								<span>所属栏目：{$cate.name}</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+
+			<div class="row">
+				<div class="col-md-8 col-sm-12">
+
+					<div class="content-nav">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- <img src="__IMG__/{$article.pic}" alt="pig"> -->
+								<p>{$article.text}</p>
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+					<!--发表评论开始-->
+					<div class="content-nav">
+						<div class="row">
+							<div class="col-md-12">
+								<h4>发表评论</h4>
+								<form action="{:url('Comment/index')}" method="post">
+									<div class="form-group">
+										<input type="hidden" name="nid" class="form-control" value="{$article.id}">
+									</div>
+									<div class="form-group">
+										<input type="hidden" name="uid" class="form-control" value="{$Request.session.id}">
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" name="text" id="text"></textarea>
+									</div>
+
+									<button type="submit" class="btn btn-default">提交</button>
+								</form>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<!--发表评论结束-->
+
+
+					<!--显示评论开始-->
+					{foreach name="comments" item="com" key="k"}
+					<div class="content-nav">
+						<div class="row">
+							<div class="col-md-12">
+								{if condition="$com['pic']"}
+								<img src="__IMG__/{$com.pic}" alt="" style="width:30px; height: 30px;" class="img-circle">
+								{else /}
+								<img src="__IMG__/upload/user/author.jpg" alt="" style="width:30px; height: 30px;" class="img-circle">
+								{/if}
+
+								<p>#{$k+1} 来自{$com.username}的评论（{:date('Y-m-d',$com.time)}）</p>
+								<p>{$com.text}</p>
+								<hr>
+							</div>
+						</div>
+					</div>
+					{/foreach}
+
+
+					<div class="content-nav">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<!--分页效果开始-->
+								<nav aria-label="Page navigation">
+									<ul class="pagination">
+										{$comments->render()}
+									</ul>
+								</nav>
+								<!--分页效果结束-->
+							</div>
+						</div>
+					</div>
+
+
+					<!--显示评论结束-->
+
+
+
+
+
+				</div>
+
+
+				<!--右边侧边栏开始-->
+				<!-- <div class="col-md-4 col-sm-12">
+
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="thumbnail" style="background-color: #e4e0cd;padding: 30px;">
+								<img class="media-object " src="__PUBLIC__/images/author-bg.jpg" alt="author">
+								<img class="media-object img-circle" src="__PUBLIC__/images/author.jpg" alt="author" width="100px" height="100px"
+								 style="position: relative;top: -45px;">
+								<div class="caption" style="position: relative;top: -30px;">
+									<h4 class="media-heading text-center">lily</h4>
+									<p class="text-center">奋斗在梦想道路上的90后</p>
+								</div>
+							</div>
+
+
+						</div>
+
+
+					</div>
+				</div> -->
+				<!--右边侧边栏结束-->
+				{include file="common/right"}
+				<div class="col-md-4 col-sm-12">
+
+
+					<div class="row">
+						<div class="col-md-12">
+							<div style="padding: 30px;">
+							<div class="thumbnail" style="background-color: transparent;padding: 30px;">
+								
+								<img class="media-object " src="__PUBLIC__/images/author-bg.jpg" alt="author" >
+								<img class="media-object img-circle" src="__PUBLIC__/images/author.jpg" alt="author" width="100px" height="100px"
+								 style="position: relative;top: -45px;">
+								<div class="caption" style="position: relative;top: -30px;color: #fff;">
+									<h4 class="media-heading text-center">lily</h4>
+									<p class="text-center">奋斗在梦想道路上的90后</p>
+								</div>
+								</div>
+							</div>
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--第一个区域结束-->
+
+
+		{include file="common/footer"}
+
+
+
+		{include file="common/copyright"}
+
+
+
+
+
+
+
+
+
+
+	</body>
+
+</html>

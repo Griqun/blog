@@ -1,0 +1,1690 @@
+[ 2020-02-03T16:27:25+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index/id/1.html
+[ log ] localhost/myblog/public/index.php/index/article/index/id/1.html [运行时间：1.686899s][吞吐率：0.59req/s] [内存消耗：2,517.27kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.214350s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.073960s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001857s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003715s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.028383s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001149s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002396s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.060392s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.012873s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002268s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `id` = 1 LIMIT 1    [ RunTime:0.011209s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007190s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.001725s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021683s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.044323s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.003399s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 0,2   [ RunTime:0.001977s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002278s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = 1    [ RunTime:0.044816s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002741s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = 1    [ RunTime:0.010148s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081936s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = 1    [ RunTime:0.002495s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:28:07+08:00 ] ::1 ::1 POST /myblog/public/index.php/index/comment/index.html
+[ log ] localhost/myblog/public/index.php/index/comment/index.html [运行时间：0.344995s][吞吐率：2.90req/s] [内存消耗：2,110.13kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'comment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index/id/1.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '43',
+)
+[ info ] [ PARAM ] array (
+  'nid' => '1',
+  'uid' => '',
+  'text' => '好美呀',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Comment.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001095s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.013623s ]
+[ sql ] [ SQL ] INSERT INTO `comment` (`nid` , `uid` , `text` , `time`) VALUES (1 ,  , '好美呀' , 1580718486)      [ RunTime:0.068491s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:28:10+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index.html
+[ log ] localhost/myblog/public/index.php/index/article/index.html [运行时间：0.312603s][吞吐率：3.20req/s] [内存消耗：2,516.34kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/comment/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001132s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.044422s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000980s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001522s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.022717s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.003037s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001237s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.014912s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.001238s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000955s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 1   [ RunTime:0.000664s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000902s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.000583s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001265s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.012841s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 0,2   [ RunTime:0.000564s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001883s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = =    [ RunTime:0.000564s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001780s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = =    [ RunTime:0.000998s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018828s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = =    [ RunTime:0.001019s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:28:20+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index.html?page=3
+[ log ] localhost/myblog/public/index.php/index/article/index.html?page=3 [运行时间：0.264147s][吞吐率：3.79req/s] [内存消耗：2,517.00kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001616s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.024835s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000892s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001294s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.013925s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000688s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001569s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.015939s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.001399s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001364s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 1   [ RunTime:0.001084s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001241s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.000853s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002259s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.017118s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.004064s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 4,2   [ RunTime:0.001009s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001586s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = =    [ RunTime:0.000710s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001183s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = =    [ RunTime:0.000630s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004144s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = =    [ RunTime:0.000705s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:28:28+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index.html?page=2
+[ log ] localhost/myblog/public/index.php/index/article/index.html?page=2 [运行时间：0.191043s][吞吐率：5.23req/s] [内存消耗：2,517.05kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index.html?page=3',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000930s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.012678s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000698s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000847s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.012176s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000614s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001030s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.016522s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.000671s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001730s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 1   [ RunTime:0.000826s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007243s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.004379s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002712s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.016985s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 2,2   [ RunTime:0.000479s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002322s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = =    [ RunTime:0.000595s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000919s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = =    [ RunTime:0.000634s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004091s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = =    [ RunTime:0.000495s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:28:34+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index.html?page=1
+[ log ] localhost/myblog/public/index.php/index/article/index.html?page=1 [运行时间：0.216042s][吞吐率：4.63req/s] [内存消耗：2,516.76kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index.html?page=2',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001006s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.023485s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001169s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001162s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.016977s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001623s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001194s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.014674s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.000934s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003561s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 1   [ RunTime:0.000799s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002680s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.000946s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001188s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.018301s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 0,2   [ RunTime:0.000685s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005222s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = =    [ RunTime:0.001546s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001041s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = =    [ RunTime:0.000661s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001415s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = =    [ RunTime:0.000624s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:29:11+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.311581s][吞吐率：3.21req/s] [内存消耗：2,447.02kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index.html?page=1',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001514s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.024641s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000692s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000868s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.012193s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000943s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.011586s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.001057s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000892s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.000558s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T16:29:15+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/login/logout.html
+[ log ] localhost/myblog/public/index.php/index/login/logout.html [运行时间：0.092642s][吞吐率：10.79req/s] [内存消耗：1,554.92kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method logout ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Login.php 99 - 106
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T16:29:19+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.279931s][吞吐率：3.57req/s] [内存消耗：2,446.61kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/login/logout.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000982s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.022418s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000752s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001209s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.010860s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.004244s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005529s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.048409s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.002725s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022039s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.000706s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:00+08:00 ] ::1 ::1 POST /myblog/public/index.php/admin/login/login.html
+[ log ] localhost/myblog/public/index.php/admin/login/login.html [运行时间：0.714847s][吞吐率：1.40req/s] [内存消耗：2,167.48kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '39',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'code' => 'pcby',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Login.php 6 - 36
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001212s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.016079s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin'  AND `password` = 'admin' LIMIT 1     [ RunTime:0.001319s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:03+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/login/login.html
+[ log ] localhost/myblog/public/index.php/admin/login/login.html [运行时间：0.107538s][吞吐率：9.30req/s] [内存消耗：1,500.57kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/about/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Login.php 6 - 36
+}
+
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:04+08:00 ] ::1 ::1 GET /myblog/public/index.php/captcha.html
+[ log ] localhost/myblog/public/index.php/captcha.html [运行时间：0.275683s][吞吐率：3.63req/s] [内存消耗：1,269.77kb] [文件加载：35]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\vendor\topthink\think-captcha\src\CaptchaController.php 18 - 22
+
+  - Parameters [1] {
+    Parameter #0 [ <optional> $id = '' ]
+  }
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:09+08:00 ] ::1 ::1 POST /myblog/public/index.php/admin/login/login.html
+[ log ] localhost/myblog/public/index.php/admin/login/login.html [运行时间：0.197940s][吞吐率：5.05req/s] [内存消耗：2,167.88kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '39',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'code' => 'pcby',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Login.php 6 - 36
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001023s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.012517s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin'  AND `password` = 'admin' LIMIT 1     [ RunTime:0.000691s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:14+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/login/login.html
+[ log ] localhost/myblog/public/index.php/admin/login/login.html [运行时间：0.109549s][吞吐率：9.13req/s] [内存消耗：1,500.57kb] [文件加载：42]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/about/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Login.php 6 - 36
+}
+
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:16:15+08:00 ] ::1 ::1 GET /myblog/public/index.php/captcha.html
+[ log ] localhost/myblog/public/index.php/captcha.html [运行时间：0.157609s][吞吐率：6.34req/s] [内存消耗：1,269.75kb] [文件加载：35]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\vendor\topthink\think-captcha\src\CaptchaController.php 18 - 22
+
+  - Parameters [1] {
+    Parameter #0 [ <optional> $id = '' ]
+  }
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:17:37+08:00 ] ::1 ::1 POST /myblog/public/index.php/admin/login/login.html
+[ log ] localhost/myblog/public/index.php/admin/login/login.html [运行时间：0.221471s][吞吐率：4.52req/s] [内存消耗：2,216.30kb] [文件加载：52]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '39',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'code' => 'et5z',
+)
+[ info ] [ RUN ] Method [ <user> public method login ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Login.php 6 - 36
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001238s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.012420s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin'  AND `password` = 'admin' LIMIT 1     [ RunTime:0.000667s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:17:40+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/index/index.html
+[ log ] localhost/myblog/public/index.php/admin/index/index.html [运行时间：0.200885s][吞吐率：4.98req/s] [内存消耗：1,542.14kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/login/login.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Index.php 11 - 14
+}
+
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:32:25+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/admin/index.html
+[ log ] localhost/myblog/public/index.php/admin/admin/index.html [运行时间：0.273342s][吞吐率：3.66req/s] [内存消耗：2,272.60kb] [文件加载：55]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Admin.php 10 - 16
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\admin\index.html [ array (
+  0 => 'admins',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002099s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.028642s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `admin` ORDER BY id desc LIMIT 1   [ RunTime:0.017751s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` ORDER BY id desc LIMIT 0,2   [ RunTime:0.000617s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:33:51+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/admin/add.html
+[ log ] localhost/myblog/public/index.php/admin/admin/add.html [运行时间：0.199254s][吞吐率：5.02req/s] [内存消耗：1,700.66kb] [文件加载：46]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/admin/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method add ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Admin.php 17 - 42
+}
+
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\admin\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T17:34:37+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/admin/index.html
+[ log ] localhost/myblog/public/index.php/admin/admin/index.html [运行时间：0.293441s][吞吐率：3.41req/s] [内存消耗：2,272.58kb] [文件加载：55]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/admin/add.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Admin.php 10 - 16
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\admin\index.html [ array (
+  0 => 'admins',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001471s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.079531s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `admin` ORDER BY id desc LIMIT 1   [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` ORDER BY id desc LIMIT 0,2   [ RunTime:0.000474s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:34:41+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/article/index.html
+[ log ] localhost/myblog/public/index.php/admin/article/index.html [运行时间：0.272173s][吞吐率：3.67req/s] [内存消耗：2,309.93kb] [文件加载：55]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/admin/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Article.php 10 - 16
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\article\index.html [ array (
+  0 => 'articles',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001173s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.015357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` INNER JOIN cate ON cate.id=article.typeid  ORDER BY article.id desc LIMIT 1   [ RunTime:0.031717s ]
+[ sql ] [ SQL ] SELECT article.*,cate.name,cate.sort FROM `article` INNER JOIN cate ON cate.id=article.typeid  ORDER BY article.id desc LIMIT 0,2   [ RunTime:0.049477s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:34:48+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/article/add.html
+[ log ] localhost/myblog/public/index.php/admin/article/add.html [运行时间：0.163110s][吞吐率：6.13req/s] [内存消耗：2,178.95kb] [文件加载：51]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/article/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method add ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Article.php 20 - 83
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\article\add.html [ array (
+  0 => 'cates',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001057s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.012826s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.003257s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T17:35:58+08:00 ] ::1 ::1 GET /myblog/public/index.php/admin/article/index.html
+[ log ] localhost/myblog/public/index.php/admin/article/index.html [运行时间：0.188755s][吞吐率：5.30req/s] [内存消耗：2,309.93kb] [文件加载：55]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/myblog/public/index.php/admin/admin/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\admin\controller\Article.php 10 - 16
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/admin\view\article\index.html [ array (
+  0 => 'articles',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001266s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.059143s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` INNER JOIN cate ON cate.id=article.typeid  ORDER BY article.id desc LIMIT 1   [ RunTime:0.003259s ]
+[ sql ] [ SQL ] SELECT article.*,cate.name,cate.sort FROM `article` INNER JOIN cate ON cate.id=article.typeid  ORDER BY article.id desc LIMIT 0,2   [ RunTime:0.009971s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:33:53+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：1.721921s][吞吐率：0.58req/s] [内存消耗：2,446.98kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.270479s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.098115s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.017017s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010983s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.076004s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.031808s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033553s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.056244s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.021188s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026486s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.003179s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.009891s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:33:57+08:00 ] ::1 ::1 POST /myblog/public/index.php/index/zan/index.html
+[ log ] localhost/myblog/public/index.php/index/zan/index.html [运行时间：0.379413s][吞吐率：2.64req/s] [内存消耗：2,131.22kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'zan',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'zanid' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Zan.php 6 - 25
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001821s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zan` [ RunTime:0.034201s ]
+[ sql ] [ SQL ] INSERT INTO `zan` (`zanid` , `uid` , `time`) VALUES (1 , 1 , 1580729637)     [ RunTime:0.070714s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018955s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.047513s ]
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = 1    [ RunTime:0.011894s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:01+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/article/index.html
+[ log ] localhost/myblog/public/index.php/index/article/index.html [运行时间：0.367963s][吞吐率：2.72req/s] [内存消耗：2,516.24kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/zan/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Article.php 6 - 32
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\article\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'article',
+  4 => 'cate',
+  5 => 'comments',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001668s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.039879s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000986s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005394s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.015015s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000540s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004180s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.013934s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.002998s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001008s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 1   [ RunTime:0.000973s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000874s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 4 LIMIT 1    [ RunTime:0.015935s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002071s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 1   [ RunTime:0.013318s ]
+[ sql ] [ SQL ] SELECT comment.*,user.username,user.pic FROM `comment` INNER JOIN user ON comment.uid=user.id  LIMIT 0,2   [ RunTime:0.009062s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001353s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `num`=num+1  WHERE  `id` = =    [ RunTime:0.000873s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001220s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `zannum`=zannum+1  WHERE  `id` = =    [ RunTime:0.000524s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031889s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] UPDATE `article`  SET `shounum`=shounum+1  WHERE  `id` = =    [ RunTime:0.000632s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:25+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.220231s][吞吐率：4.54req/s] [内存消耗：2,447.04kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/article/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004242s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.027376s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001427s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001027s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.015326s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000960s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001318s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.017755s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.000772s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002311s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.000712s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:33+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/login/logout.html
+[ log ] localhost/myblog/public/index.php/index/login/logout.html [运行时间：0.105485s][吞吐率：9.48req/s] [内存消耗：1,554.92kb] [文件加载：44]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method logout ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Login.php 99 - 106
+}
+
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:36+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.155332s][吞吐率：6.44req/s] [内存消耗：2,446.61kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/login/logout.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000909s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.021078s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000463s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000871s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.014992s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000406s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000785s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.011902s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.000643s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001511s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.000594s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:42+08:00 ] ::1 ::1 POST /myblog/public/index.php/index/zan/index.html
+[ log ] localhost/myblog/public/index.php/index/zan/index.html [运行时间：0.181879s][吞吐率：5.50req/s] [内存消耗：2,110.12kb] [文件加载：50]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'zan',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://localhost',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/index/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '12',
+)
+[ info ] [ PARAM ] array (
+  'zanid' => '1',
+  'uid' => '',
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Zan.php 6 - 25
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001672s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zan` [ RunTime:0.037440s ]
+[ sql ] [ SQL ] INSERT INTO `zan` (`zanid` , `uid` , `time`) VALUES (1 ,  , 1580729681)     [ RunTime:0.043530s ]
+
+---------------------------------------------------------------
+[ 2020-02-03T19:34:45+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.235256s][吞吐率：4.25req/s] [内存消耗：2,446.55kb] [文件加载：54]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://localhost/myblog/public/index.php/index/zan/index.html',
+  'cookie' => 'PHPSESSID=7jida32f8flp8v4dq6cg75f682',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] Method [ <user> public method index ] {
+  @@ E:\PHPTutorial\WWW\myblog\application\index\controller\Index.php 6 - 21
+}
+
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\PHPTutorial\WWW\myblog\public/../application/index\view\index\index.html [ array (
+  0 => 'cates',
+  1 => 'friends',
+  2 => 'articles',
+  3 => 'articless',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004437s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.018753s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.003779s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003170s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.022541s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000627s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001161s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.020055s ]
+[ sql ] [ SQL ] SELECT * FROM `article`  [ RunTime:0.000981s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002681s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.003067s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.000734s ]
+
+---------------------------------------------------------------

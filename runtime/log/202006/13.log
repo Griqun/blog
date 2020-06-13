@@ -1,0 +1,215 @@
+[ 2020-06-13T15:58:32+08:00 ] ::1 ::1 GET /myblog/public/index.php
+[ log ] localhost/myblog/public/index.php [运行时间：0.433025s][吞吐率：2.31req/s] [内存消耗：2,617.30kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.109006s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.006000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:58:46+08:00 ] ::1 ::1 GET /myblog/public/index.php?page=2
+[ log ] localhost/myblog/public/index.php?page=2 [运行时间：0.207012s][吞吐率：4.83req/s] [内存消耗：2,646.62kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.004000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 3,3   [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:58:52+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/1.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/1.html [运行时间：0.226013s][吞吐率：4.42req/s] [内存消耗：2,646.93kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 1 LIMIT 1    [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 1 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:58:53+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/2.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/2.html [运行时间：0.217013s][吞吐率：4.61req/s] [内存消耗：2,570.07kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.003000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 2 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 2 LIMIT 0,3    [ RunTime:0.022001s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:58:56+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/5.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/5.html [运行时间：0.170009s][吞吐率：5.88req/s] [内存消耗：2,629.73kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.003000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 5 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 5 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:03+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/search.html?search=%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2
+[ log ] localhost/myblog/public/index.php/index/index/search.html?search=%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2 [运行时间：0.247014s][吞吐率：4.05req/s] [内存消耗：2,549.84kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  (  title like '%登录界面%' ) LIMIT 1   [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  title like '%登录界面%' ) LIMIT 0,3   [ RunTime:0.009000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:07+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/search.html?search=%E5%8D%8E%E5%A4%8F
+[ log ] localhost/myblog/public/index.php/index/index/search.html?search=%E5%8D%8E%E5%A4%8F [运行时间：0.145008s][吞吐率：6.90req/s] [内存消耗：2,549.83kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  (  title like '%华夏%' ) LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  (  title like '%华夏%' ) LIMIT 0,3   [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:11+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/6.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/6.html [运行时间：0.169010s][吞吐率：5.92req/s] [内存消耗：2,573.07kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 6 LIMIT 1    [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 6 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:18+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/6.html?page=2
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/6.html?page=2 [运行时间：0.172010s][吞吐率：5.81req/s] [内存消耗：2,555.65kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 6 LIMIT 1    [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 6 LIMIT 3,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:29+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/2.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/2.html [运行时间：0.151008s][吞吐率：6.62req/s] [内存消耗：2,569.98kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 2 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 2 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:30+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/1.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/1.html [运行时间：0.150009s][吞吐率：6.67req/s] [内存消耗：2,646.91kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 1 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 1 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:31+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/cate/index/id/5.html
+[ log ] localhost/myblog/public/index.php/index/cate/index/id/5.html [运行时间：0.216012s][吞吐率：4.63req/s] [内存消耗：2,629.73kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.003001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` WHERE  `typeid` = 5 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` WHERE  `typeid` = 5 LIMIT 0,3    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:41+08:00 ] ::1 ::1 POST /myblog/public/index.php/index/shou/index.html
+[ log ] localhost/myblog/public/index.php/index/shou/index.html [运行时间：0.291016s][吞吐率：3.44req/s] [内存消耗：2,106.43kb] [文件加载：50]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shou` [ RunTime:0.074005s ]
+[ sql ] [ SQL ] INSERT INTO `shou` (`shouid` , `uid` , `time`) VALUES (19 ,  , 1592035180)     [ RunTime:0.125007s ]
+
+---------------------------------------------------------------
+[ 2020-06-13T15:59:44+08:00 ] ::1 ::1 GET /myblog/public/index.php/index/index/index.html
+[ log ] localhost/myblog/public/index.php/index/index/index.html [运行时间：0.165010s][吞吐率：6.06req/s] [内存消耗：2,617.16kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT * FROM `cate`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `friend` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `friend`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 10   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=myblog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `article` LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `article` LIMIT 0,3   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
